@@ -5,10 +5,8 @@ public class Hogwards {
         this.magicPower = magicPower;
         this.transgressionDistance = transgressionDistance;
     }
-
     private int magicPower;
     private int transgressionDistance;
-
     public void printInfo() {
     System.out.print(magicPower + " " + transgressionDistance);
 }

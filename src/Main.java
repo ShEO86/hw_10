@@ -1,8 +1,6 @@
 public class Main {
 
     public static void main(String[] args) {
-
-
         Hogwards harryPotter = new Griffingore(70, 64,94,90,80);
         harryPotter.printInfo();
         Hogwards harmonyGrainger = new Griffingore(90, 60, 78, 50, 95);
@@ -18,6 +16,4 @@ public class Main {
         harryPotter.comparisonStudents(harryPotter);
         justinFintchPhletchly.comparisonStudents(sedrikDiggory);
     }
-
-
 }

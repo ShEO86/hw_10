@@ -24,10 +24,8 @@ public class Griffingore extends Hogwards{
                 System.out.println("Нельзя сравнивать студента с самим собой");
             } else {
                 int first = this.nobility + this.honor + this.bravery;
-//                System.out.println(first);
                 Griffingore griffingore = (Griffingore) student;
                 int second = griffingore.nobility + griffingore.honor + griffingore.bravery;
-//                System.out.println(second);
                 if (first > second) {
                     System.out.println("Первый студент превосходит второго по баллам");
                 } else if (first < second) {
