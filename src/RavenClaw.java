@@ -11,8 +11,6 @@ public class RavenClaw extends Hogwards {
         this.wisdom = wisdom;
         this.creativity = creativity;
     }
-
-
     public void comparisonStudents(Hogwards student) {
         if (!(student instanceof RavenClaw)) {
             System.out.println("Нельзя сравнивать студентов разных факультетов");
@@ -20,11 +18,9 @@ public class RavenClaw extends Hogwards {
             if (this == student) {
                 System.out.println("Нельзя сравнивать студента с самим собой");
             } else {
-                int first = this.mind + this.wisdom + this.creativity;
-//               System.out.println(first);
+                int first = this.mind + this.wisdom + this.creativity + this.getMagicPower() + this.getTransgressionDistance();
                 RavenClaw ravenClaw = (RavenClaw) student;
-                int second = ravenClaw.mind + ravenClaw.wisdom + ravenClaw.creativity;
-//                System.out.println(second);
+                int second = ravenClaw.mind + ravenClaw.wisdom + ravenClaw.creativity + ravenClaw.getMagicPower() + ravenClaw.getTransgressionDistance();
                 if (first > second) {
                     System.out.println("Первый студент превосходит второго по баллам");
                 } else if (first < second) {
@@ -35,7 +31,6 @@ public class RavenClaw extends Hogwards {
             }
         }
     }
-
     public void printInfo() {
         System.out.print("Студент Когтеврана, ");
         super.printInfo();
