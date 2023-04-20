@@ -25,9 +25,9 @@ public class Slizeren extends Hogwards{
             if (this == student) {
                 System.out.println("Нельзя сравнивать студента с самим собой");
             } else {
-                int first = this.cunning + this.determination + this.ambition + this.resourcefulness + this.thirstForPower + this.getMagicPower() + this.getTransgressionDistance();
+                int first = this.cunning + this.determination + this.ambition + this.resourcefulness + this.thirstForPower + super.getMagicPower() + super.getTransgressionDistance();
                 Slizeren slizeren = (Slizeren) student;
-                int second = slizeren.cunning + slizeren.determination + slizeren.ambition + slizeren.resourcefulness + slizeren.thirstForPower + this.getMagicPower() + this.getTransgressionDistance();
+                int second = slizeren.cunning + slizeren.determination + slizeren.ambition + slizeren.resourcefulness + slizeren.thirstForPower + slizeren.getMagicPower() + slizeren.getTransgressionDistance();
                 if (first > second) {
                     System.out.println("Первый студент превосходит второго по баллам");
                 } else if (first < second) {
