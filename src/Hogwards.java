@@ -10,5 +10,14 @@ public class Hogwards {
     public void printInfo() {
     System.out.print(magicPower + " " + transgressionDistance);
 }
+
+    public int getMagicPower() {
+        return magicPower;
+    }
+
+    public int getTransgressionDistance() {
+        return transgressionDistance;
+    }
+
     public void comparisonStudents(Hogwards student){}
 }

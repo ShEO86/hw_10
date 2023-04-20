@@ -22,9 +22,9 @@ public class Hufflepuff extends Hogwards {
             if (this == student) {
                 System.out.println("Нельзя сравнивать студента с самим собой");
             } else {
-                int first = this.industriousness + this.loyalty + this.honesty;
+                int first = this.industriousness + this.loyalty + this.honesty + this.getMagicPower() + this.getTransgressionDistance();
                 Hufflepuff hufflepuff = (Hufflepuff) student;
-                int second = hufflepuff.industriousness + hufflepuff.loyalty + hufflepuff.honesty;
+                int second = hufflepuff.industriousness + hufflepuff.loyalty + hufflepuff.honesty + hufflepuff.getMagicPower() + hufflepuff.getTransgressionDistance();;
                 if (first > second) {
                     System.out.println("Первый студент превосходит второго по баллам");
                 } else if (first < second) {
