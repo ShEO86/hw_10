@@ -1,10 +1,10 @@
-public class Hufflepuff extends Hogwards {
+public class HufflepuffStudents extends HogwardsStudents {
     private int industriousness;
     private int loyalty;
     private int honesty;
 
-    public Hufflepuff(int magicPower, int transgressionDistance, int industriousness, int loyalty, int honesty) {
-        super(magicPower, transgressionDistance);
+    public HufflepuffStudents(String name, int magicPower, int transgressionDistance, int industriousness, int loyalty, int honesty) {
+        super(name, magicPower, transgressionDistance);
         this.industriousness = industriousness;
         this.loyalty = loyalty;
         this.honesty = honesty;
@@ -15,15 +15,15 @@ public class Hufflepuff extends Hogwards {
         super.printInfo();
         System.out.println(" " + industriousness + " " + loyalty + " " + honesty);
     }
-    public void comparisonStudents(Hogwards student) {
-        if (!(student instanceof Hufflepuff)) {
+    public void compareStrudents(HogwardsStudents student) {
+        if (!(student instanceof HufflepuffStudents)) {
             System.out.println("Нельзя сравнивать студентов разных факультетов");
         } else {
             if (this == student) {
                 System.out.println("Нельзя сравнивать студента с самим собой");
             } else {
                 int first = this.industriousness + this.loyalty + this.honesty + super.getMagicPower() + super.getTransgressionDistance();
-                Hufflepuff hufflepuff = (Hufflepuff) student;
+                HufflepuffStudents hufflepuff = (HufflepuffStudents) student;
                 int second = hufflepuff.industriousness + hufflepuff.loyalty + hufflepuff.honesty + hufflepuff.getMagicPower() + hufflepuff.getTransgressionDistance();;
                 if (first > second) {
                     System.out.println("Первый студент превосходит второго по баллам");

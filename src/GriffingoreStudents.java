@@ -1,10 +1,10 @@
-public class Griffingore extends Hogwards{
+public class GriffingoreStudents extends HogwardsStudents {
     private int nobility;
     private int honor;
     private int bravery;
 
-    public Griffingore(int magicPower, int transgressionDistance, int nobility, int honor, int bravery) {
-        super(magicPower, transgressionDistance);
+    public GriffingoreStudents(String name, int magicPower, int transgressionDistance, int nobility, int honor, int bravery) {
+        super(name, magicPower, transgressionDistance);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
@@ -16,15 +16,15 @@ public class Griffingore extends Hogwards{
         super.printInfo();
         System.out.println(" " + nobility + " " + honor + " " + bravery);
     }
-    public void comparisonStudents(Hogwards student) {
-        if (!(student instanceof Griffingore)) {
+    public void compareStrudents(HogwardsStudents student) {
+        if (!(student instanceof GriffingoreStudents)) {
             System.out.println("Нельзя сравнивать студентов разных факультетов");
         } else {
             if (this == student) {
                 System.out.println("Нельзя сравнивать студента с самим собой");
             } else {
                 int first = this.nobility + this.honor + this.bravery + super.getMagicPower() + super.getTransgressionDistance();
-                Griffingore griffingore = (Griffingore) student;
+                GriffingoreStudents griffingore = (GriffingoreStudents) student;
                 int second = griffingore.nobility + griffingore.honor + griffingore.bravery + griffingore.getMagicPower() + griffingore.getTransgressionDistance();
                 if (first > second) {
                     System.out.println("Первый студент превосходит второго по баллам");

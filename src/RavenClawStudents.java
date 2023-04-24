@@ -1,25 +1,24 @@
-import java.util.Objects;
-
-public class RavenClaw extends Hogwards {
+public class RavenClawStudents extends HogwardsStudents {
     private int mind;
     private int wisdom;
     private int creativity;
 
-    public RavenClaw(int magicPower, int transgressionDistance, int mind, int wisdom, int creativity) {
-        super(magicPower, transgressionDistance);
+    public RavenClawStudents(String name, int magicPower, int transgressionDistance,  int mind, int wisdom, int creativity) {
+        super(name, magicPower, transgressionDistance);
         this.mind = mind;
         this.wisdom = wisdom;
         this.creativity = creativity;
     }
-    public void comparisonStudents(Hogwards student) {
-        if (!(student instanceof RavenClaw)) {
+
+    public void compareStrudents(HogwardsStudents student) {
+        if (!(student instanceof RavenClawStudents)) {
             System.out.println("Нельзя сравнивать студентов разных факультетов");
         } else {
             if (this == student) {
                 System.out.println("Нельзя сравнивать студента с самим собой");
             } else {
                 int first = this.mind + this.wisdom + this.creativity + super.getMagicPower() + super.getTransgressionDistance();
-                RavenClaw ravenClaw = (RavenClaw) student;
+                RavenClawStudents ravenClaw = (RavenClawStudents) student;
                 int second = ravenClaw.mind + ravenClaw.wisdom + ravenClaw.creativity + ravenClaw.getMagicPower() + ravenClaw.getTransgressionDistance();
                 if (first > second) {
                     System.out.println("Первый студент превосходит второго по баллам");
